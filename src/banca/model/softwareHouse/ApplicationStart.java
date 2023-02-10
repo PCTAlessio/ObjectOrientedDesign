@@ -11,8 +11,10 @@ public class ApplicationStart {
                 "JavaScript");
         Developer d3 = new Developer("Luigi", "Sturzo", LocalDate.of(1951, 7, 19), 'm',
         "JavaScript");
+        Developer d4 = new Developer("Ennio", "Morricone", LocalDate.of(1998, 7, 12), 'm',
+                "C++");
         ScrumMaster sm1 = new ScrumMaster ("Luca", "Verdi", LocalDate.of(1965, 7, 11),
-                'm', 6, 2, 2);
+                'm', 6, 2, 3);
         boolean added=sm1.addTeamMember(d1);
         if (added){
             System.out.println("Ho aggiunto lo sviluppatore.");
@@ -31,6 +33,18 @@ public class ApplicationStart {
         } else {
             System.out.println("Il team era già al completo.");
         }
+        added = sm1.addTeamMember(d4);
+        if (added){
+            System.out.println("Ho aggiunto lo sviluppatore.");
+        } else {
+            System.out.println("Il team era già al completo.");
+        }
+
+        sm1.examineTeam();
+
+
+
+
 
     }
 

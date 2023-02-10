@@ -41,4 +41,8 @@ public abstract class Person {
     public void sleep(){
         System.out.println("zzz");
     }
+
+    public String getFullName(){
+        return String.format("%s %s", firstName, lastName);
+    }
 }
